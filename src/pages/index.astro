@@ -10,69 +10,167 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
-    </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-slate-900 to-teal-950 text-white">
+  <div class="absolute inset-0 bg-black/40"></div> <!-- Subtle dark overlay for text readability -->
+  <div class="relative z-10 text-center px-8 max-w-5xl mx-auto">
+    <div class="mb-12">
+  <img 
+    src="/Portfoliopfp.jpg" 
+    alt="Isaac - AWS Certified Cloud Practitioner" 
+    class="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto border-8 border-teal-600 shadow-2xl object-cover"
+  />
+</div>
+    <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tight leading-tight">
+      Hi, I'm Issac.
+    </h1>
+    <p class="text-3xl md:text-5xl font-semibold mb-6 text-teal-300">
+      AWS Certified Cloud Practitioner
+    </p>
+    <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-12 opacity-90 leading-relaxed">
+      Deploying real cloud infrastructure with Terraform, Docker, and Fargate · Troubleshooting expert from Geek Squad · Ready to bring scalable, reliable solutions to your team remotely.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+      <a href="#projects" class="px-10 py-5 bg-teal-600 text-white text-xl font-bold rounded-full hover:bg-teal-500 transition shadow-lg">
+        View Projects
+      </a>
+      <a href="#contact" class="px-10 py-5 border-4 border-white text-white text-xl font-bold rounded-full hover:bg-white hover:text-black transition">
+        Contact Me
       </a>
     </div>
   </div>
+</section>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+<div class="my-32"></div>
+
+<div class="text-5xl w-full font-bold mb-16 text-center">Featured Project</div>
+
+<HorizontalCard
+  title="Secure Scalable AWS Fargate ECS Deployment"
+  img="/fargate-preview.png"  
+  desc="Built a production-ready, secure, and scalable web application on AWS Fargate using Terraform Infrastructure as Code. Includes custom VPC, ECS cluster with Fargate tasks, Application Load Balancer, security groups, IAM roles, and CloudWatch logging. Deployed and running live 24/7 - demonstrating real-world cloud engineering skills."
+  url="http://fargate-demo-alb-657427054.us-east-1.elb.amazonaws.com"
+  badge="LIVE"
+  target="_blank"
+/>
+
+<div class="my-12 text-center">
+ <a href="https://github.com/issacguerrero67-web/terraform-secure-fargate-demo" target="_blank" class="inline-block px-10 py-5 bg-gray-700 text-white text-xl font-bold rounded-full hover:bg-gray-600 transition shadow-lg">
+  View Full Terraform Code on GitHub
+</a>
+</div>
+
+<div class="my-32"></div> <!-- Extra space -->
+
+<div class="text-center">
+  <h2 class="text-5xl font-bold mb-16">Skills & Technologies</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 max-w-5xl mx-auto">
+    <div class="flex flex-col items-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="w-24 h-24 object-contain mb-4" />
+      <p class="text-xl font-semibold">AWS</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="https://www.nicepng.com/png/detail/386-3869336_hashicorp-terraform-logo.png" alt="Terraform" class="w-24 h-24 object-contain mb-4" />
+      <p class="text-xl font-semibold">Terraform</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="https://www.docker.com/app/uploads/2023/08/logo-guide-logos-1.svg" alt="Docker" class="w-24 h-24 object-contain mb-4" />
+      <p class="text-xl font-semibold">Docker</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="https://e7.pngegg.com/pngimages/342/131/png-clipart-penguin-tux-design-logo-linux-penguin-animals-logo.png" alt="Linux" class="w-24 h-24 object-contain mb-4" />
+      <p class="text-xl font-semibold">Linux</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="https://brand.github.com/_next/static/media/logo-09.74e790e1.png" alt="GitHub" class="w-24 h-24 object-contain mb-4" />
+      <p class="text-xl font-semibold">GitHub</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="https://e7.pngegg.com/pngimages/690/976/png-clipart-logo-nginx-brand-font-product-apache-server-text-logo-thumbnail.png" alt="Nginx" class="w-24 h-24 object-contain mb-4" />
+      <p class="text-xl font-semibold">Nginx</p>
+    </div>
   </div>
+</div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+<div class="my-32"></div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+<div class="max-w-4xl mx-auto px-8">
+  <h2 class="text-5xl font-bold mb-16 text-center">Experience & Certifications</h2>
+  
+  <div class="space-y-12">
+    <!-- Experience Item 1 -->
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div class="text-teal-400 font-bold text-xl min-w-32 text-right">2020 - </div>
+      <div class="flex-1">
+        <h3 class="text-3xl font-semibold mb-2">Geek Squad Agent / Technical Support</h3>
+        <p class="text-xl opacity-90 mb-4">Best Buy</p>
+        <p class="opacity-80">Diagnosed and resolved hardware/software issues for customers, built custom PCs, provided expert troubleshooting and customer education. Honed problem-solving skills in high-pressure environments — directly transferable to remote tech support and cloud operations.</p>
+      </div>
+    </div>
+    
+    <!-- Certifications -->
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div class="text-teal-400 font-bold text-xl min-w-32 text-right">2025</div>
+      <div class="flex-1">
+        <h3 class="text-3xl font-semibold mb-4">Certifications</h3>
+        <div class="flex items-center gap-6">
+          <img 
+  src="https://assets.community.aws/a/2xVJEw3dNcWKmMaBwVvd5DYCq74/1747489978409-jpg.webp" 
+  alt="AWS Certified Cloud Practitioner badge" 
+  class="w-32 h-32 rounded-lg shadow-lg object-contain bg-white p-2" 
+/>
+          <div>
+            <p class="text-2xl font-medium">AWS Certified Cloud Practitioner</p>
+            <p class="opacity-80 mt-2">Validated foundational knowledge of AWS cloud services, architecture, security, and pricing models.</p>
+            <!-- Add your Credly badge link if you have it: <a href="your-badge-url" class="text-teal-400 hover:underline">View Credential</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+
+<div class="divider my-20"></div>
+
+
+<div class="my-32"></div>
+
+<section id="contact" class="py-20 bg-gradient-to-br from-slate-900 to-black">
+  <div class="max-w-4xl mx-auto px-8 text-center">
+    <h2 class="text-5xl font-bold mb-12 text-white">Get In Touch</h2>
+    <p class="text-xl opacity-90 mb-12 text-white">Have a question or want to work together? Send me a message!</p>
+    
+    <form action="https://formspree.io/f/mkoneqjo" method="POST" class="max-w-lg mx-auto space-y-8">
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Your Name" 
+        required 
+        class="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:border-teal-500 focus:outline-none text-white placeholder-gray-400" 
+      />
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your Email" 
+        required 
+        class="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:border-teal-500 focus:outline-none text-white placeholder-gray-400" 
+      />
+      <textarea 
+        name="message" 
+        placeholder="Your Message" 
+        rows="6" 
+        required 
+        class="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:border-teal-500 focus:outline-none text-white placeholder-gray-400"
+      ></textarea>
+      <button 
+        type="submit" 
+        class="w-full py-5 bg-teal-600 text-white text-xl font-bold rounded-full hover:bg-teal-500 transition shadow-lg"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<div class="divider my-20"></div>
 </BaseLayout>
